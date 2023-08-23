@@ -40,13 +40,33 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
+  let resultado = [];
+
+   for(let i =0; i < array.length;i++){
+       resultado.push(cb(array[i]));
+   }
+
+  return resultado;
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+    let resultado = [];
+    
+    for(let i =0; i < arrayOfStrings.length;i++){
+         if(arrayOfStrings[i].at(0) === "a")  
+         resultado.push(arrayOfStrings[i]);
+    }
+
+    return resultado
 }
+
+// let string = "pepito"
+   
+// let comienzacon= string.at(2)
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
